@@ -1,0 +1,140 @@
+import { motion } from "framer-motion";
+import { Link } from "wouter";
+import { ArrowRight, Shield, Award, Users, Building2, Target, Eye, Heart, CheckCircle } from "lucide-react";
+import { COMPANY } from "@/lib/data";
+import AnimatedSection from "@/components/sections/AnimatedSection";
+import SectionHeading from "@/components/sections/SectionHeading";
+import SEO from "@/components/SEO";
+
+
+export default function About() {
+  return (
+    <div className="pt-20">
+       <SEO
+        title="About Daksh Elevator | Home & Commercial Elevators Bangalore"
+        description="Daksh Elevator Solutions provides premium elevators, installation, modernization, AMC, and maintenance services across India."
+        keywords="Elevator Company Bangalore, Lift Company Bangalore, Home Elevators, Passenger Lift, Goods Lift, Hospital Lift, MRL Lift, Hydraulic Lift, Traction Lift, Glass Lift, Capsule Lift, Villa Lift, Lift Installation, Elevator Maintenance, Lift AMC, Elevator Modernization, Daksh Elevators"
+        canonical=""
+        ogImage=""
+      />
+      {/* Hero */}
+      <section className="relative py-24 lg:py-32 overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src=""
+            alt="Best home elevator company in Bangalore"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-brand-blue/85" />
+        </div>
+        <div className="container relative z-10">
+          <AnimatedSection>
+            <span className="inline-block text-brand-orange text-sm font-bold uppercase tracking-wider mb-4">
+              About Us
+            </span>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+              India's Trusted <br />
+              Elevator Manufacturer
+            </h1>
+            <p className="text-white/80 text-lg max-w-2xl leading-relaxed">
+              For over two decades, Daksh Elevator Solutions has been at the forefront of vertical transportation innovation, delivering reliable elevator systems that combine engineering excellence with quality design.
+            </p>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* Our Story */}
+      <section className="py-20 bg-white">
+        <div className="container">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <AnimatedSection>
+              <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-xl">
+                <img
+                  src="/manus-storage/elevator-manufacturing_c43fbd94.png"
+                  alt="Elevator maintenance services near me"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </AnimatedSection>
+            <AnimatedSection delay={0.2}>
+              <span className="inline-block text-brand-orange text-sm font-bold uppercase tracking-wider mb-3">Our Story</span>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                From Vision to Excellence
+              </h2>
+              <p className="text-gray-600 text-base leading-relaxed mb-4">
+                Founded in 2018 in Coimbatore, Daksh Elevator Solutions began with a vision to bring world-class elevator technology to India. What started as a small manufacturing unit has grown into one of the country's most trusted elevator brands.
+              </p>
+              <p className="text-gray-600 text-base leading-relaxed mb-4">
+                Today, we operate state-of-the-art manufacturing facilities equipped with the latest CNC machinery, automated assembly lines, and quality testing centers. Our team of 500+ professionals ensures every elevator meets international safety standards.
+              </p>
+              <p className="text-gray-600 text-base leading-relaxed">
+                From residential villas to towering commercial complexes, hospitals to shopping malls — Daksh Elevators have become synonymous with reliability, quality, and performance across India.
+              </p>
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
+      {/* Mission Vision Values */}
+      <section className="py-20 bg-gray-50">
+        <div className="container">
+          <SectionHeading label="Our Foundation" title="Mission, Vision & Values" />
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              { icon: Target, title: "Our Mission", desc: "To manufacture and deliver the highest quality elevator systems that redefine vertical transportation, ensuring safety, efficiency, and reliability in every installation." },
+              { icon: Eye, title: "Our Vision", desc: "To be India's most trusted and innovative elevator company, setting benchmarks in engineering excellence and customer satisfaction." },
+              { icon: Heart, title: "Our Values", desc: "Safety first, customer-centric approach, innovation-driven solutions, uncompromising quality, and sustainable engineering practices." },
+            ].map((item, i) => (
+              <AnimatedSection key={item.title} delay={i * 0.15}>
+                <div className="bg-white rounded-lg p-8 h-full text-center shadow-md border border-gray-100">
+                  <item.icon className="w-10 h-10 text-brand-blue mx-auto mb-5" />
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">{item.title}</h3>
+                  <p className="text-gray-500 text-sm leading-relaxed">{item.desc}</p>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Certifications */}
+      <section className="py-20 bg-white">
+        <div className="container">
+          <SectionHeading label="Certifications" title="Quality & Compliance" subtitle="Our elevators meet the highest standards of safety and quality." />
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {["ISO 9001:2015", "BIS Certified", "IS 2091 Standard", "EN 81 Compliant"].map((cert, i) => (
+              <AnimatedSection key={cert} delay={i * 0.1}>
+                <div className="bg-gray-50 rounded-lg p-6 text-center shadow-sm border border-gray-100">
+                  <Shield className="w-8 h-8 text-brand-orange mx-auto mb-3" />
+                  <p className="text-gray-800 font-bold text-sm">{cert}</p>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-20 bg-brand-blue">
+        <div className="container">
+          <AnimatedSection>
+            <div className="text-center">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Partner With AV Elevator
+              </h2>
+              <p className="text-white/80 text-lg max-w-xl mx-auto mb-8">
+                Join the hundreds of developers, architects, and building owners who trust Daksh Elevator Solutions for their vertical transportation needs.
+              </p>
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-2 px-8 py-4 text-sm font-bold text-white bg-brand-orange rounded-md hover:bg-brand-orange-dark transition-all duration-300"
+              >
+                Contact Us <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+    </div>
+  );
+}
