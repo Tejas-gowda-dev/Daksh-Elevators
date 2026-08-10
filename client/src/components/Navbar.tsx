@@ -26,8 +26,8 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-white/98 backdrop-blur-xl border-b border-gray-100 shadow-sm"
-          : "bg-white/90 backdrop-blur-md"
+          ? " backdrop-blur-xl border-b border-gray-100 shadow-sm"
+          : " backdrop-blur-md"
       }`}
     >
       <nav className="container flex items-center justify-between h-20">
@@ -111,51 +111,100 @@ export default function Navbar() {
       </nav>
 
       {/* Mobile Menu */}
-      <AnimatePresence>
-        {mobileOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3, ease: [0.23, 1, 0.32, 1] }}
-            className="lg:hidden bg-white/98 backdrop-blur-xl border-t border-gray-100 overflow-hidden"
-          >
-            <div className="container py-6 space-y-1">
-              {NAV_LINKS.map((link) => (
-                <div key={link.href}>
-                  <Link
-                    href={link.href}
-                    className={`block px-4 py-3 text-base font-semibold rounded-lg transition-colors ${
-                      location === link.href
-                        ? "text-[#0077CC]"
-                        : "text-gray-700 hover:text-[#0077CC]"
-                    }`}
-                  >
-                    {link.label}
-                  </Link>
-                  {link.children?.map((child) => (
-                    <Link
-                      key={child.href}
-                      href={child.href}
-                      className="block px-8 py-2 text-sm text-gray-500 hover:text-[#0077CC] transition-colors"
-                    >
-                      {child.label}
-                    </Link>
-                  ))}
-                </div>
-              ))}
-              <div className="pt-4 border-t border-gray-100 mt-4">
-                <Link
-                  href="/contact"
-                  className="block w-full text-center px-6 py-3 text-sm font-bold text-white bg-[#FF6600] rounded-md"
+     
+<AnimatePresence>
+  {mobileOpen && (
+    <motion.div
+      initial={{ opacity: 0, height: 0 }}
+      animate={{ opacity: 1, height: "auto" }}
+      exit={{ opacity: 0, height: 0 }}
+      transition={{ duration: 0.3, ease: [0.23, 1, 0.32, 1] }}
+      className="lg:hidden bg-white/98 backdrop-blur-xl border-t border-gray-100 overflow-hidden"
+    >
+      <div className="container py-6 space-y-1">
+        {NAV_LINKS.map((link) => (
+          <div key={link.href} className="border-b border-gray-100 last:border-b-0">
+            
+            {/* Parent Menu */}
+            {link.children ? (
+              <button
+                onClick={() =>
+                  setOpenDropdown(
+                    openDropdown === link.href ? null : link.href
+                  )
+                }
+                className={`w-full flex items-center justify-between px-4 py-3 text-base font-semibold rounded-lg transition-colors ${
+                  location === link.href
+                    ? "text-[#0077CC]"
+                    : "text-gray-700 hover:text-[#0077CC]"
+                }`}
+              >
+                <span>{link.label}</span>
+
+                <ChevronDown
+                  className={`w-5 h-5 transition-transform duration-300 ${
+                    openDropdown === link.href ? "rotate-180" : ""
+                  }`}
+                />
+              </button>
+            ) : (
+              <Link
+                href={link.href}
+                className={`block px-4 py-3 text-base font-semibold rounded-lg transition-colors ${
+                  location === link.href
+                    ? "text-[#0077CC]"
+                    : "text-gray-700 hover:text-[#0077CC]"
+                }`}
+              >
+                {link.label}
+              </Link>
+            )}
+
+            {/* Mobile Dropdown Children */}
+            <AnimatePresence>
+              {link.children && openDropdown === link.href && (
+                <motion.div
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: "auto" }}
+                  exit={{ opacity: 0, height: 0 }}
+                  transition={{
+                    duration: 0.25,
+                    ease: [0.23, 1, 0.32, 1],
+                  }}
+                  className="overflow-hidden"
                 >
-                  Get Free Quote
-                </Link>
-              </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+                  <div className="pb-2 pl-4">
+                    {link.children.map((child) => (
+                      <Link
+                        key={child.href}
+                        href={child.href}
+                        className="flex items-center justify-between px-4 py-3 text-sm text-gray-500 hover:text-[#0077CC] hover:bg-blue-50 rounded-lg transition-all group"
+                      >
+                        <span>{child.label}</span>
+
+                        <ArrowUpRight className="w-4 h-4 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200 text-[#0077CC]" />
+                      </Link>
+                    ))}
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+        ))}
+
+        {/* Mobile CTA */}
+        <div className="pt-4 mt-4">
+          <Link
+            href="/contact"
+            className="block w-full text-center px-6 py-3 text-sm font-bold text-white bg-[#FF6600] rounded-md hover:bg-[#e65c00] transition-all duration-300"
+          >
+            Get Free Quote
+          </Link>
+        </div>
+      </div>
+    </motion.div>
+  )}
+</AnimatePresence>
     </header>
   );
 }

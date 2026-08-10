@@ -7,6 +7,8 @@ import AnimatedSection from "@/components/sections/AnimatedSection";
 import SectionHeading from "@/components/sections/SectionHeading";
 import { useCountUp } from "@/hooks/useCountUp";
 import Logo from "../assets/Daksh.webp";
+import LogoDark from "../assets/dksha-elevator.webp";
+import About from "../assets/dksha-about.webp";
 
 /* ============================================
    HERO SECTION — Blue gradient background like Daksh
@@ -21,15 +23,14 @@ function HeroSection() {
         canonical=""
         ogImage=""
       />
-      <section className="relative min-h-[85vh] flex items-center overflow-hidden rounded-3xl">
+      <section className="relative min-h-[85vh] flex items-center overflow-hidden  mt-20">
         {/* Background image with overlay */}
         <div className="absolute inset-0">
           <img
-            src=""
+            src={LogoDark}
             alt="Elevator Company Bangalore"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#005fa3]/90 via-[#0077CC]/80 to-[#005fa3]/70" />
         </div>
 
         {/* Content */}
@@ -118,22 +119,29 @@ function AboutPreview() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <AnimatedSection>
             <div className="relative">
-              <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-xl">
+              {/* <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-xl">
                 <img
-                  src="/manus-storage/elevator-manufacturing_c43fbd94.png"
+                  src={About}
                   alt="Best Elevator Company in Bangalore"
                   className="w-full h-full object-cover"
                 />
-              </div>
+              </div> */}
+              <div className="w-full max-w-[712px] aspect-[712/534] rounded-lg overflow-hidden shadow-xl">
+  <img
+    src={About}
+    alt="Best Elevator Company in Bangalore"
+    className="w-full h-full object-cover"
+  />
+</div>
             </div>
           </AnimatedSection>
           <AnimatedSection delay={0.2}>
-            <span className="inline-block text-brand-orange text-sm font-bold uppercase tracking-wider mb-3">
-              About Us
+            <span className="inline-block text-brand-orange text-xl font-bold uppercase tracking-wider mb-3">
+              Why Choose Us?
             </span>
 
             <p className="text-gray-600 text-base leading-relaxed mb-6">
-              Established in <strong>2018</strong>, AV Elevator Solutions is a trusted provider of reliable, safe, and efficient elevator solutions. With <strong>750+ projects successfully completed</strong>, we specialize in the design, installation, and maintenance of lifts for residential and commercial spaces. Driven by quality, safety, and customer satisfaction, we deliver elevator solutions you can trust.
+              Established in <strong>2018</strong>, Dksh Elevator Solutions is a trusted provider of reliable, safe, and efficient elevator solutions. With <strong>750+ projects successfully completed</strong>, we specialize in the design, installation, and maintenance of lifts for residential and commercial spaces. Driven by quality, safety, and customer satisfaction, we deliver elevator solutions you can trust.
             </p>
             <ul className="space-y-2 mb-8">
               {["Established in 2018 with proven industry experience", "750+ successful projects completed across various sectors", "High safety standards and quality-driven processes", "Customized elevator solutions for every space", "Reliable after-sales service and maintenance support"].map((item) => (
