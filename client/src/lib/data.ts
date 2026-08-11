@@ -6,8 +6,8 @@ export const COMPANY = {
   name: "Daksh Elevator Solutions",
   tagline: "Elevating Standards. Engineering Excellence.",
   phone: "+91 94498 66452",
-  email: "daksh elevatorsprivatelimited@gmail.com",
-  whatsapp: "91 94498 66452",
+  email: "dakshelevatorsprivatelimited@gmail.com",
+  whatsapp: "91 8971376452",
   address: "#12, 1st Floor, 1st Cross, 10th Main, Adarsha Layout, Jnanajyothi Nagar, Mallathalli, Bengaluru-560056",
   yearFounded: 2018,
   citiesServed: 150,
@@ -170,10 +170,10 @@ export const INDUSTRIES = [
 ];
 
 export const TESTIMONIALS = [
-  { name: "Rajesh Kumar", role: "Director, Skyline Developers", text: "Daksh Elevator Solutions delivered our residential project on time and the quality exceeded our expectations. Their team's professionalism is unmatched.", rating: 5 },
-  { name: "Dr. Priya Sharma", role: "Administrator, MedCare Hospital", text: "The hospital elevator system they installed handles our patient transport flawlessly. The precision leveling and quiet operation are remarkable.", rating: 5 },
-  { name: "Anand Venkatesh", role: "CEO, Grand Plaza Hotels", text: "Our Home Elevators have become the talking point of our hotel. Guests love the experience and the build quality is exceptional.", rating: 5 },
-  { name: "Meena Lakshmi", role: "Homeowner, Villa Project", text: "The home elevator transformed our living experience. Beautiful design, whisper-quiet, and the team was incredibly professional throughout.", rating: 5 },
+  { name: "Rajesh Kumar", role: "Director, Skyline Developers", text: "The elevators installed by Daksh Elevators enhanced both functionality and aesthetics of our property. Guests appreciate the comfort, and we appreciate the dependable service support.", rating: 5 },
+  { name: "Dr. Priya Sharma", role: "Administrator, MedCare Hospital", text: "Daksh Elevators delivered exactly what they promisedsmooth performance, excellent finish, and reliable after-sales support. Their team was professional and responsive throughout the project.", rating: 5 },
+  { name: "Anand Venkatesh", role: "CEO, Grand Plaza Hotels", text: "We chose Daksh Elevators for their reputation of trust and reliability, and they exceeded our expectations. The custom built solution perfectly matched our building requirements.", rating: 5 },
+  { name: "Meena Lakshmi", role: "Homeowner, Villa Project", text: "We have been working with Daksh Elevators for years, and their consistency in quality and service is impressive. Their team is always prompt and professional.", rating: 5 },
 ];
 
 export const FAQS = [

@@ -113,6 +113,114 @@ export default function About() {
           </div>
         </div>
       </section>
+      {/* Founder */}
+<section className="py-20 lg:py-28 bg-gray-50">
+  <div className="container">
+    <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
+      {/* Founder Image */}
+      <AnimatedSection>
+        <div className="relative max-w-lg mx-auto lg:mx-0">
+
+          {/* Decorative background */}
+          <div className="absolute -bottom-5 -right-5 w-full h-full bg-brand-orange/10 rounded-xl" />
+
+          <div className="relative rounded-xl overflow-hidden shadow-xl bg-white">
+            <img
+              src="/images/founder-dinesha-sv.jpg"
+              alt="Dinesha SV, Managing Director of Daksh Elevators"
+              className="w-full aspect-[4/5] object-cover"
+            />
+          </div>
+
+          {/* Experience Badge */}
+          <div className="absolute bottom-6 left-6 bg-brand-blue text-white rounded-lg px-5 py-4 shadow-lg">
+            <p className="text-2xl font-bold">20+</p>
+            <p className="text-xs text-white/80 uppercase tracking-wider">
+              Years Experience
+            </p>
+          </div>
+
+        </div>
+      </AnimatedSection>
+
+      {/* Founder Content */}
+      <AnimatedSection delay={0.2}>
+        <div>
+
+          <span className="inline-block text-brand-orange text-sm font-bold uppercase tracking-wider mb-3">
+            Our Founder
+          </span>
+
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
+            Dinesha SV
+          </h2>
+
+          <p className="text-brand-blue font-semibold text-lg mb-6">
+            Managing Director, Daksh Elevators
+          </p>
+
+          <div className="w-16 h-1 bg-brand-orange rounded-full mb-6" />
+
+          <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">
+            The Founder's Story
+          </h3>
+
+          <p className="text-gray-600 leading-relaxed mb-5">
+            With more than 20 years of extensive experience in the elevator
+            industry, Dinesha SV brings deep industry knowledge and proven
+            expertise in lift maintenance and new installations.
+          </p>
+
+          <p className="text-gray-600 leading-relaxed mb-8">
+            His experience across the elevator industry has shaped Daksh
+            Elevators' commitment to reliable engineering, quality
+            workmanship, safety, and customer satisfaction. His vision is to
+            deliver dependable vertical transportation solutions that
+            customers can trust for years to come.
+          </p>
+
+          {/* Expertise */}
+          <div className="grid sm:grid-cols-2 gap-4">
+
+            <div className="flex items-start gap-3 p-4 bg-white rounded-lg border border-gray-100 shadow-sm">
+              <div className="flex-shrink-0 w-10 h-10 rounded-md bg-brand-orange/10 flex items-center justify-center">
+                <Award className="w-5 h-5 text-brand-orange" />
+              </div>
+
+              <div>
+                <h4 className="font-bold text-gray-900 text-sm">
+                  20+ Years
+                </h4>
+                <p className="text-gray-500 text-xs mt-1">
+                  Industry Experience
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-3 p-4 bg-white rounded-lg border border-gray-100 shadow-sm">
+              <div className="flex-shrink-0 w-10 h-10 rounded-md bg-brand-blue/10 flex items-center justify-center">
+                <Building2 className="w-5 h-5 text-brand-blue" />
+              </div>
+
+              <div>
+                <h4 className="font-bold text-gray-900 text-sm">
+                  Expert
+                </h4>
+                <p className="text-gray-500 text-xs mt-1">
+                  Lift Installation & Maintenance
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </AnimatedSection>
+
+    </div>
+  </div>
+</section>
 
       {/* CTA */}
       <section className="py-20 bg-brand-blue">
