@@ -1,14 +1,15 @@
 import SEO from "@/components/SEO";
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-import { ArrowRight, Shield, Award, Clock, ChevronDown, Star, MapPin, Users, Building2, CheckCircle } from "lucide-react";
+import { ArrowRight, Shield, Award, Clock, ChevronDown, Star, MapPin, Users, Building2, CheckCircle, Download } from "lucide-react";
 import { COMPANY, PRODUCTS, SERVICES, INDUSTRIES, TESTIMONIALS, FAQS } from "@/lib/data";
 import AnimatedSection from "@/components/sections/AnimatedSection";
 import SectionHeading from "@/components/sections/SectionHeading";
 import { useCountUp } from "@/hooks/useCountUp";
-import Logo from "../assets/Daksh.webp";
+// import Logo from "../assets/Daksh.webp";
 import LogoDark from "../assets/dksha-elevator.webp";
 import About from "../assets/dksha-about.webp";
+import AutoPopupForm from "@/components/AutoPopupForm";
 
 /* ============================================
    HERO SECTION — Blue gradient background like Daksh
@@ -17,7 +18,7 @@ function HeroSection() {
   return (
     <>
       <SEO
-        title="Daksh Elevator Solutions | Premium Elevator Manufacturer in India"
+        title="Daksh Elevators Pvt. Ltd. | Home, Commercial & Passenger Elevators Bangalore"
         description="Daksh Elevator Solutions provides premium elevators, installation, modernization, AMC, and maintenance services across India."
         keywords="Elevator manufacturer, Passenger Lift, Home Lift, Goods Lift"
         canonical=""
@@ -109,61 +110,7 @@ function StatCard({ stat, index }: { stat: { label: string; value: number; suffi
   );
 }
 
-/* ============================================
-   ABOUT PREVIEW — Image left, text right like Daksh
-   ============================================ */
-function AboutPreview() {
-  return (
-    <section className="py-20 lg:py-28 bg-gray-50">
-      <div className="container">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <AnimatedSection>
-            <div className="relative">
-              {/* <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-xl">
-                <img
-                  src={About}
-                  alt="Best Elevator Company in Bangalore"
-                  className="w-full h-full object-cover"
-                />
-              </div> */}
-              <div className="w-full max-w-[712px] aspect-[712/534] rounded-lg overflow-hidden shadow-xl">
-  <img
-    src={About}
-    alt="Best Elevator Company in Bangalore"
-    className="w-full h-full object-cover"
-  />
-</div>
-            </div>
-          </AnimatedSection>
-          <AnimatedSection delay={0.2}>
-            <span className="inline-block text-brand-orange text-xl font-bold uppercase tracking-wider mb-3">
-              Why Choose Us?
-            </span>
 
-            <p className="text-gray-600 text-base leading-relaxed mb-6">
-              Established in <strong>2018</strong>, Dksh Elevator Solutions is a trusted provider of reliable, safe, and efficient elevator solutions. With <strong>750+ projects successfully completed</strong>, we specialize in the design, installation, and maintenance of lifts for residential and commercial spaces. Driven by quality, safety, and customer satisfaction, we deliver elevator solutions you can trust.
-            </p>
-            <ul className="space-y-2 mb-8">
-              {["Established in 2018 with proven industry experience", "750+ successful projects completed across various sectors", "High safety standards and quality-driven processes", "Customized elevator solutions for every space", "Reliable after-sales service and maintenance support"].map((item) => (
-                <li key={item} className="flex items-start gap-2 text-gray-600 text-sm">
-                  <CheckCircle className="w-4 h-4 text-brand-orange mt-0.5 shrink-0" />
-                  {item}
-                </li>
-              ))}
-            </ul>
-            <Link
-              href="/about"
-              className="inline-flex items-center gap-2 px-7 py-3 text-sm font-bold text-white bg-brand-blue rounded-md hover:bg-brand-blue-dark transition-all duration-300"
-            >
-              Read More
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-          </AnimatedSection>
-        </div>
-      </div>
-    </section>
-  );
-}
 
 /* ============================================
    PRODUCTS SECTION
@@ -265,7 +212,7 @@ function WhyChooseUs() {
       <div className="container">
         <SectionHeading
           label="Why Choose Us"
-          title="The Daksh Elevator Advantage"
+          title="Daksh Elevator Advantage"
           subtitle="What sets us apart in India's elevator industry — and why leading developers trust us."
         />
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -344,6 +291,96 @@ function TestimonialsSection() {
     </section>
   );
 }
+
+
+/* ============================================
+   ABOUT PREVIEW — Image left, text right like Daksh
+   ============================================ */
+
+function AboutPreview() {
+  return (
+    <section className="py-20 lg:py-28 bg-gray-50">
+      <div className="container">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+
+          {/* About Image */}
+          <AnimatedSection>
+            <div className="relative">
+              <div className="w-full max-w-[712px] aspect-[712/534] rounded-lg overflow-hidden shadow-xl">
+                <img
+                  src={About}
+                  alt="Best Elevator Company in Bangalore"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </AnimatedSection>
+
+          {/* About Content */}
+          <AnimatedSection delay={0.2}>
+            <span className="inline-block text-brand-orange text-xl font-bold uppercase tracking-wider mb-3">
+              Why Choose Us?
+            </span>
+
+            <p className="text-gray-600 text-base leading-relaxed mb-6">
+              Established in <strong>2018</strong>, Dksh Elevator Solutions is
+              a trusted provider of reliable, safe, and efficient elevator
+              solutions. With <strong>250+ projects successfully completed</strong>,
+              we specialize in the design, installation, and maintenance of
+              lifts for residential and commercial spaces. Driven by quality,
+              safety, and customer satisfaction, we deliver elevator solutions
+              you can trust.
+            </p>
+
+            <ul className="space-y-2 mb-8">
+              {[
+                "Established in 2018 with proven industry experience",
+                "750+ successful projects completed across various sectors",
+                "High safety standards and quality-driven processes",
+                "Customized elevator solutions for every space",
+                "Reliable after-sales service and maintenance support",
+              ].map((item) => (
+                <li
+                  key={item}
+                  className="flex items-start gap-2 text-gray-600 text-sm"
+                >
+                  <CheckCircle className="w-4 h-4 text-brand-orange mt-0.5 shrink-0" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+
+            {/* Buttons */}
+            <div className="flex flex-wrap items-center gap-4">
+
+              {/* Read More Button */}
+              <Link
+                href="/about"
+                className="inline-flex items-center gap-2 px-7 py-3 text-sm font-bold text-white bg-brand-blue rounded-md hover:bg-brand-blue-dark transition-all duration-300"
+              >
+                Read More
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+
+              {/* Download Brochure Button */}
+              <a
+                href="/brochure.pdf"
+                download="Dksh-Elevator-Solutions-Brochure.pdf"
+                className="inline-flex items-center gap-2 px-7 py-3 text-sm font-bold text-white bg-brand-orange rounded-md hover:opacity-90 transition-all duration-300"
+              >
+                Download Brochure
+                <Download className="w-4 h-4" />
+              </a>
+
+            </div>
+          </AnimatedSection>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+
 
 /* ============================================
    FAQ SECTION
@@ -427,13 +464,15 @@ export default function Home() {
   return (
     <>
       <HeroSection />
-      <StatsSection />
-      <AboutPreview />
+      {/* <StatsSection /> */}
+      {/* <AboutPreview /> */}
+       <AutoPopupForm />
       <ProductsSection />
       <ServicesSection />
       <WhyChooseUs />
       <IndustriesSection />
       <TestimonialsSection />
+      <AboutPreview />
       <FAQSection />
       <CTASection />
     </>

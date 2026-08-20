@@ -29,7 +29,7 @@ export default function Products() {
       {/* Product Grid */}
       <section className="py-20 bg-gray-50">
         <div className="container">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {PRODUCTS.map((product, i) => (
               <AnimatedSection key={product.slug} delay={i * 0.08}>
                 <Link href={`/products/${product.slug}`}>

@@ -59,7 +59,7 @@ export default function SEO({ title, description, keywords = "elevator, lift, Da
       logo: `${BASE_URL}/manus-storage/hero-elevator_c567e1ce.png`,
       description: "India's premier elevator manufacturer delivering luxury vertical transportation solutions.",
       telephone: "+91 98765 43210",
-      email: "info@avelevator.com",
+      email: "Info@dakshelevators.in",
       address: {
         "@type": "PostalAddress",
         streetAddress: "123 Industrial Estate",

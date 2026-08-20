@@ -67,7 +67,7 @@ export default function Contact() {
 
     try {
       const response = await fetch(
-        "https://formspree.io/f/xabc1234",
+        "https://formspree.io/f/xqpzgarz",
         {
           method: "POST",
           headers: {
@@ -241,11 +241,10 @@ export default function Contact() {
                   <a
                     key={item.label}
                     href={item.href}
-                    className={`group flex items-center gap-3 sm:gap-4 px-3 py-3 sm:px-4 sm:py-4 rounded-lg hover:bg-brand-blue/5 transition-colors ${
-                      i !== panelItems.length - 1
+                    className={`group flex items-center gap-3 sm:gap-4 px-3 py-3 sm:px-4 sm:py-4 rounded-lg hover:bg-brand-blue/5 transition-colors ${i !== panelItems.length - 1
                         ? "border-b border-gray-100"
                         : ""
-                    }`}
+                      }`}
                   >
                     <div className="relative w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-gray-50 border border-gray-200 flex items-center justify-center shrink-0 group-hover:border-brand-orange group-hover:bg-brand-orange/10 transition-colors">
                       <item.icon className="w-4 h-4 sm:w-4.5 sm:h-4.5 text-brand-blue group-hover:text-brand-orange transition-colors" />
@@ -398,50 +397,8 @@ export default function Contact() {
 
                       </div>
 
-                      {/* ----------------------------------------
-                          EMAIL + CITY
-                      ---------------------------------------- */}
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
 
-                        <div>
-                          <label className="block text-gray-600 text-sm font-medium mb-2">
-                            Email
-                          </label>
 
-                          <input
-                            type="email"
-                            value={form.email}
-                            onChange={(e) =>
-                              updateField("email", e.target.value)
-                            }
-                            className="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 text-gray-900 text-sm focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-colors"
-                            placeholder="Email address"
-                          />
-
-                          {errors.email && (
-                            <p className="text-red-500 text-xs mt-1">
-                              {errors.email}
-                            </p>
-                          )}
-                        </div>
-
-                        <div>
-                          <label className="block text-gray-600 text-sm font-medium mb-2">
-                            City
-                          </label>
-
-                          <input
-                            type="text"
-                            value={form.city}
-                            onChange={(e) =>
-                              updateField("city", e.target.value)
-                            }
-                            className="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 text-gray-900 text-sm focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-colors"
-                            placeholder="Your city"
-                          />
-                        </div>
-
-                      </div>
 
                       {/* ----------------------------------------
                           PROJECT DETAILS

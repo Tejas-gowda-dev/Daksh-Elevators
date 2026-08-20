@@ -1,3 +1,9 @@
+import passengerElevator from "../assets/Passenger-Lift.webp";
+import villaElevator from "../assets/villa elevator.webp";
+import HospitalElevator from "../assets/hospital-elevator.webp";
+import GoodsElevator from "../assets/goods-lift.webp";
+import HydraulicElevator from "../assets/hydualic lift.webp";
+
 // ============================================
 // Daksh Elevator Solutions — Site Data
 // ============================================
@@ -5,8 +11,8 @@
 export const COMPANY = {
   name: "Daksh Elevator Solutions",
   tagline: "Elevating Standards. Engineering Excellence.",
-  phone: "+91 94498 66452",
-  email: "dakshelevatorsprivatelimited@gmail.com",
+  phone: "+91 8971376452",
+  email: "Info@dakshelevators.in",
   whatsapp: "91 8971376452",
   address: "#12, 1st Floor, 1st Cross, 10th Main, Adarsha Layout, Jnanajyothi Nagar, Mallathalli, Bengaluru-560056",
   yearFounded: 2018,
@@ -22,12 +28,11 @@ export const NAV_LINKS = [
     label: "Products",
     href: "/products",
     children: [
-      { label: "Passenger Elevators", href: "/products/passenger-elevators" },
-      { label: "Home Elevators", href: "/products/home-elevators" },
+      { label: "Residential Elevators", href: "/products/passenger-elevators" },
+      { label: "Villa/Home Elevators", href: "/products/home-elevators" },
       { label: "Hospital Elevators", href: "/products/hospital-elevators" },
       { label: "Goods Elevators", href: "/products/goods-elevators" },
       { label: "Hydraulic Elevators", href: "/products/hydraulic-elevators" },
-      { label: "MRL Elevators", href: "/products/mrl-elevators" },
     ],
   },
   {
@@ -40,12 +45,8 @@ export const NAV_LINKS = [
       { label: "Modernization", href: "/services/modernization" },
     ],
   },
-  { label: "Projects", href: "/projects" },
-  { label: "Industries", href: "/industries" },
-  { label: "Gallery", href: "/gallery" },
-  { label: "Testimonials", href: "/testimonials" },
-  { label: "Blog", href: "/blog" },
-  { label: "Contact", href: "/contact" },
+  { label: "Experience Center", href: "/gallery" },
+
 ];
 
 export const PRODUCTS = [
@@ -55,36 +56,36 @@ export const PRODUCTS = [
     shortDesc: "Smooth, reliable vertical transportation for residential and commercial buildings.",
     fullDesc: "Our passenger elevators combine cutting-edge technology with elegant design to deliver seamless vertical transportation. Engineered for high-traffic environments, they offer whisper-quiet operation, rapid transit, and unmatched safety features.",
     capacity: "4–30 Persons",
-    speed: "0.63 – 4.0 m/s",
-    stops: "2 – 120 Floors",
-    features: ["Regenerative Drive", "LED Cabin Lighting", "Touchless Controls", "Emergency Communication", "Anti-Vibration System", "Power Saving Mode"],
+    speed: "1.0 m/s",
+    stops: "2 – 80 Floors",
+    features: ["Regenerative Drive", "LED Cabin Lighting",  "Emergency Communication", "Anti-Vibration System", "Power Saving Mode"],
     applications: ["High-Rise Buildings", "Apartments", "Hotels", "Office Complexes", "Shopping Malls"],
-    image: "/manus-storage/hero-elevator_c567e1ce.png",
+    image: passengerElevator,
   },
   {
     slug: "home-elevators",
-    name: "Home Elevators",
+    name: "Villa/Home Elevators",
     shortDesc: "Luxury home lifts designed for elegance, safety, and effortless living.",
     fullDesc: "Transform your home with a luxury elevator that blends seamlessly with your interior design. Our home elevators offer whisper-quiet operation, minimal installation footprint, and customizable cabin aesthetics.",
     capacity: "1–6 Persons",
-    speed: "0.15 – 0.5 m/s",
-    stops: "2 – 6 Floors",
-    features: ["Zero Pit Required", "Glass Enclosure Options", "Battery Backup", "Silent Operation", "Custom Finishes", "Child Safety Lock"],
+    speed: "1.0 m/s",
+    stops: "2 – 5 Floors",
+    features: [ "Glass Enclosure Options", "Battery Backup", "Silent Operation", "Custom Finishes", "Child Safety Lock"],
     applications: ["Villas", "Penthouses", "Duplex Homes", "Townhouses", "Hill Homes"],
-    image: "/manus-storage/residential-villa_aee5c194.png",
+    image: villaElevator,
   },
-  
+
   {
     slug: "hospital-elevators",
     name: "Hospital Elevators",
     shortDesc: "Purpose-built for healthcare — wide doors, smooth rides, and critical reliability.",
     fullDesc: "Hospital elevators are engineered for the unique demands of healthcare environments. Extra-wide doors accommodate stretchers and wheelchairs, while precision leveling ensures safe patient transfer at every floor.",
-    capacity: "5–20 Persons",
-    speed: "0.63 – 1.6 m/s",
+    capacity: "5–24 Persons",
+    speed: " 1.0 m/s",
     stops: "2 – 40 Floors",
     features: ["Stretchers Compatible", "Antimicrobial Coating", "Precision Leveling", "Priority Service Mode", "Bacterial Resistant Surfaces", "Backup Power"],
     applications: ["Hospitals", "Clinics", "Nursing Homes", "Medical Centers", "Rehabilitation Centers"],
-    image: "/manus-storage/elevator-manufacturing_c43fbd94.png",
+    image: HospitalElevator,
   },
   {
     slug: "goods-elevators",
@@ -96,7 +97,7 @@ export const PRODUCTS = [
     stops: "2 – 20 Floors",
     features: ["Heavy-Duty Platform", "Overload Protection", "Industrial Motor", "Safety Gate System", "Cargo Door Lock", "Vibration Dampening"],
     applications: ["Warehouses", "Factories", "Logistics Centers", "Commercial Kitchens", "Parking Lots"],
-    image: "/manus-storage/elevator-team_e3b3e2a3.png",
+    image: GoodsElevator,
   },
   {
     slug: "hydraulic-elevators",
@@ -104,25 +105,14 @@ export const PRODUCTS = [
     shortDesc: "Smooth, powerful hydraulic lifts ideal for low to mid-rise buildings.",
     fullDesc: "Hydraulic elevators offer smooth, powerful operation without the need for a machine room above the shaft. Ideal for buildings up to 6 floors, they provide excellent load capacity with minimal space requirements.",
     capacity: "4–15 Persons",
-    speed: "0.15 – 1.0 m/s",
-    stops: "2 – 6 Floors",
-    features: ["No Machine Room Above", "Smooth Hydraulic Drive", "High Load Capacity", "Emergency Descent", "Low Noise Operation", "Compact Design"],
+    speed: "0.5m/s",
+    stops: "2 – 5 Floors",
+    features: ["No Machine Room Above","Zero Pit Required ", "Smooth Hydraulic Drive", "High Load Capacity", "Emergency Descent", "Low Noise Operation", "Compact Design"],
     applications: ["Low-Rise Buildings", "Parking Structures", "Small Offices", "Residential Complexes", "Retrofit Projects"],
-    image: "/manus-storage/hero-elevator_c567e1ce.png",
+    image: HydraulicElevator,
   },
-  {
-    slug: "mrl-elevators",
-    name: "MRL Elevators",
-    shortDesc: "Machine Room Less technology — maximum performance with minimum footprint.",
-    fullDesc: "Machine Room Less (MRL) elevators integrate the drive system within the shaft, eliminating the need for a separate machine room. This space-saving solution offers energy-efficient performance with modern aesthetics.",
-    capacity: "4–24 Persons",
-    speed: "0.63 – 2.5 m/s",
-    stops: "2 – 60 Floors",
-    features: ["No Separate Machine Room", "Permanent Magnet Motor", "Energy Efficient", "Compact Control Panel", "Regenerative Braking", "Silent Operation"],
-    applications: ["Mid-Rise Buildings", "Apartments", "Hotels", "Office Buildings", "Mixed-Use Complexes"],
-    image: "/manus-storage/commercial-building_a4985bfb.png",
-  },
- 
+
+
 ];
 
 export const SERVICES = [
@@ -177,12 +167,12 @@ export const TESTIMONIALS = [
 ];
 
 export const FAQS = [
-  { q: "What is the warranty period for AV elevators?", a: "All AV elevators come with a standard 2-year warranty covering manufacturing defects and mechanical components. Extended warranty options are available upon request." },
+  { q: "What is the warranty period for AV elevators?", a: "All Daksh elevators come with a standard 2-year warranty covering manufacturing defects and mechanical components. Extended warranty options are available upon request." },
   { q: "How long does installation typically take?", a: "Installation time varies by project. A home elevator typically takes 2-4 weeks, while a commercial passenger elevator may take 4-8 weeks from shaft readiness to commissioning." },
   { q: "Do you offer 24/7 emergency service?", a: "Yes, we provide 24/7 emergency breakdown service across all our service areas. Our AMC customers receive priority response with guaranteed arrival within 2 hours." },
   { q: "Can you modernize elevators from other brands?", a: "Absolutely. Our modernization team works with all major elevator brands. We can upgrade controls, doors, cabin interiors, and safety systems regardless of the original manufacturer." },
   { q: "What maintenance packages do you offer?", a: "We offer Bronze (basic), Silver (standard), Gold (comprehensive), and Platinum (premium) AMC packages. Each includes scheduled servicing, genuine spare parts, and emergency support at varying levels." },
-  { q: "Are your elevators BIS certified?", a: "Yes, all AV elevators are manufactured to IS 2091 standards and undergo rigorous quality testing. We also comply with international safety standards including EN 81." },
+  { q: "Are your elevators BIS certified?", a: "Yes, all Daksh elevators are manufactured to IS 2091 standards and undergo rigorous quality testing. We also comply with international safety standards including EN 81." },
   { q: "Do you provide custom design options?", a: "Yes, we offer extensive customization including cabin finishes, lighting, flooring, door styles, and control panels. Our design team works with architects to create unique elevator experiences." },
   { q: "What areas do you serve?", a: "We serve 150+ cities across India with a strong presence in Tamil Nadu, Kerala, Karnataka, Telangana, and Maharashtra. Our network continues to expand." },
 ];

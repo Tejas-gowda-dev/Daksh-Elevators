@@ -42,7 +42,7 @@ export default function Footer() {
             <ul className="space-y-3">
               {[
                 { label: "Passenger Elevators", href: "/products/passenger-elevators" },
-                { label: "Home Elevators", href: "/products/home-elevators" },
+                { label: "Villa/Home Elevators", href: "/products/home-elevators" },
                 { label: "Hospital Elevators", href: "/products/hospital-elevators" },
                 { label: "Goods Elevators", href: "/products/goods-elevators" },
                 { label: "Hydraulic Elevators", href: "/products/hydraulic-elevators" },
@@ -75,10 +75,10 @@ export default function Footer() {
                 </li>
               ))}
               {[
-                { label: "Projects", href: "/projects" },
-                { label: "Industries", href: "/industries" },
-                { label: "Blog", href: "/blog" },
-                { label: "Careers", href: "/careers" },
+                // { label: "Projects", href: "/projects" },
+                { label: "Experience Center", href: "/gallery" },
+                // { label: "Blog", href: "/blog" },
+                // { label: "Careers", href: "/careers" },
               ].map((item) => (
                 <li key={item.href}>
                   <Link href={item.href} className="text-gray-400 hover:text-white text-sm transition-colors duration-300 flex items-center gap-2 group">
