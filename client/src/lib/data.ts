@@ -167,11 +167,11 @@ export const TESTIMONIALS = [
 ];
 
 export const FAQS = [
-  { q: "What is the warranty period for AV elevators?", a: "All Daksh elevators come with a standard 2-year warranty covering manufacturing defects and mechanical components. Extended warranty options are available upon request." },
+  { q: "What is the warranty period for Daksh elevators?", a: "All Daksh elevators come with a standard 1-year warranty covering manufacturing defects and mechanical components. Extended warranty options are available upon request." },
   { q: "How long does installation typically take?", a: "Installation time varies by project. A home elevator typically takes 2-4 weeks, while a commercial passenger elevator may take 4-8 weeks from shaft readiness to commissioning." },
   { q: "Do you offer 24/7 emergency service?", a: "Yes, we provide 24/7 emergency breakdown service across all our service areas. Our AMC customers receive priority response with guaranteed arrival within 2 hours." },
   { q: "Can you modernize elevators from other brands?", a: "Absolutely. Our modernization team works with all major elevator brands. We can upgrade controls, doors, cabin interiors, and safety systems regardless of the original manufacturer." },
-  { q: "What maintenance packages do you offer?", a: "We offer Bronze (basic), Silver (standard), Gold (comprehensive), and Platinum (premium) AMC packages. Each includes scheduled servicing, genuine spare parts, and emergency support at varying levels." },
+  { q: "What maintenance packages do you offer?", a: "We offer Silver (standard) and Gold (comprehensive) AMC packages. Each includes scheduled servicing, genuine spare parts, and emergency support at varying levels." },
   { q: "Are your elevators BIS certified?", a: "Yes, all Daksh elevators are manufactured to IS 2091 standards and undergo rigorous quality testing. We also comply with international safety standards including EN 81." },
   { q: "Do you provide custom design options?", a: "Yes, we offer extensive customization including cabin finishes, lighting, flooring, door styles, and control panels. Our design team works with architects to create unique elevator experiences." },
   { q: "What areas do you serve?", a: "We serve 150+ cities across India with a strong presence in Tamil Nadu, Kerala, Karnataka, Telangana, and Maharashtra. Our network continues to expand." },

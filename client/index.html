@@ -1,24 +1,59 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-IN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b3d91" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-  <title>Daksh Elevators Pvt. Ltd. | Home, Commercial & Passenger Elevators Bangalore</title>
-  <meta name="description"
-    content="Daksh Elevators Pvt. Ltd. provides high-quality home lifts, passenger lifts, goods lifts, hospital lifts, elevator installation, maintenance, modernization, and AMC services across Bangalore and Karnataka.">
-<link rel="icon" type="image/webp" href="./src/assets/Daksh.webp">
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
-    rel="stylesheet" />
-</head>
+    <title>Daksh Elevators Pvt. Ltd. | Home, Commercial & Passenger Elevators Bangalore</title>
+    <meta name="description" content="Daksh Elevators Pvt. Ltd. provides high-quality home lifts, passenger lifts, goods lifts, hospital lifts, elevator installation, maintenance, modernization, and AMC services across Bangalore and Karnataka." />
+    <link rel="canonical" href="https://dakshelevators.in/" />
 
-<body>
-  <div id="root"></div>
-  <script type="module" src="/src/main.tsx"></script>
-  <script defer src="%VITE_ANALYTICS_ENDPOINT%/umami" data-website-id="%VITE_ANALYTICS_WEBSITE_ID%"></script>
-</body>
+    <link rel="icon" type="image/webp" href="/Daksh.webp" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Daksh Elevators Pvt. Ltd. | Bangalore" />
+    <meta property="og:description" content="Home lifts, passenger lifts, goods lifts & elevator AMC across Bangalore and Karnataka." />
+    <meta property="og:url" content="https://dakshelevators.in/" />
+    <meta property="og:image" content="https://dakshelevators.in/og-cover.jpg" />
+    <meta property="og:locale" content="en_IN" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Daksh Elevators Pvt. Ltd. | Bangalore" />
+    <meta name="twitter:description" content="Home lifts, passenger lifts, goods lifts & elevator AMC across Bangalore and Karnataka." />
+    <meta name="twitter:image" content="https://dakshelevators.in/og-cover.jpg" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Daksh Elevators Pvt. Ltd.",
+      "image": "https://dakshelevators.in/og-cover.jpg",
+      "telephone": "+91-8971376452",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Bangalore",
+        "addressRegion": "Karnataka",
+        "addressCountry": "IN"
+      },
+      "areaServed": ["Bangalore", "Karnataka"]
+    }
+    </script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <!-- Umami analytics loaded conditionally from main.tsx -->
+  </body>
 </html>

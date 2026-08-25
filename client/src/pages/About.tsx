@@ -6,6 +6,7 @@ import AnimatedSection from "@/components/sections/AnimatedSection";
 import SectionHeading from "@/components/sections/SectionHeading";
 import SEO from "@/components/SEO";
 import founderImage from "../assets/ceo.webp";
+import aboutImage from "../assets/aboutmain.webp";
 
 
 export default function About() {
@@ -51,7 +52,7 @@ export default function About() {
             <AnimatedSection>
               <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-xl">
                 <img
-                  src="/manus-storage/elevator-manufacturing_c43fbd94.png"
+                  src={aboutImage}
                   alt="Elevator maintenance services near me"
                   className="w-full h-full object-cover"
                 />
@@ -124,7 +125,7 @@ export default function About() {
               <div className="relative max-w-lg mx-auto lg:mx-0">
 
                 {/* Decorative background */}
-                <div className="absolute -bottom-5 -right-5 w-full h-full bg-brand-orange/10 rounded-xl" />
+                <div className="absolute -bottom-5 -right-5 w-full h-full  rounded-xl" />
 
                 <div className="relative rounded-xl overflow-hidden shadow-xl bg-white">
                   <img

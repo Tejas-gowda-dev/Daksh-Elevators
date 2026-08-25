@@ -201,9 +201,9 @@ function WhyChooseUs() {
   const reasons = [
     { icon: Shield, title: "Safety First", desc: "BIS certified elevators with multi-layer safety systems" },
     { icon: Award, title: "Premium Quality", desc: "Manufactured to international standards with premium materials" },
-    { icon: Clock, title: "On-Time Delivery", desc: "95% of projects delivered within committed timelines" },
-    { icon: MapPin, title: "Pan India Service", desc: "Serving 150+ cities with dedicated service teams" },
-    { icon: Users, title: "Expert Team", desc: "500+ certified engineers and technicians" },
+    { icon: Clock, title: "On-Time Delivery", desc: "99% of projects delivered within committed timelines" },
+    { icon: MapPin, title: "Across Karnataka Service", desc: "Serving 150+ cities with dedicated service teams" },
+    { icon: Users, title: "Expert Team", desc: "20+ certified engineers and technicians" },
     { icon: Building2, title: "Custom Solutions", desc: "Tailored designs for every project requirement" },
   ];
 
@@ -335,7 +335,7 @@ function AboutPreview() {
             <ul className="space-y-2 mb-8">
               {[
                 "Established in 2018 with proven industry experience",
-                "750+ successful projects completed across various sectors",
+                "250+ successful projects completed across various sectors",
                 "High safety standards and quality-driven processes",
                 "Customized elevator solutions for every space",
                 "Reliable after-sales service and maintenance support",
