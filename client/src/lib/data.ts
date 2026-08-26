@@ -45,7 +45,7 @@ export const NAV_LINKS = [
       { label: "Modernization", href: "/services/modernization" },
     ],
   },
-  { label: "Experience Center", href: "/gallery" },
+  // { label: "Experience Center", href: "/gallery" },
 
 ];
 

@@ -1,5 +1,5 @@
 import SEO from "@/components/SEO";
-import { motion } from "framer-motion";
+import { motion , AnimatePresence} from "framer-motion";
 import { Link } from "wouter";
 import { ArrowRight, Shield, Award, Clock, ChevronDown, Star, MapPin, Users, Building2, CheckCircle, Download } from "lucide-react";
 import { COMPANY, PRODUCTS, SERVICES, INDUSTRIES, TESTIMONIALS, FAQS } from "@/lib/data";
@@ -8,31 +8,56 @@ import SectionHeading from "@/components/sections/SectionHeading";
 import { useCountUp } from "@/hooks/useCountUp";
 // import Logo from "../assets/Daksh.webp";
 import LogoDark from "../assets/dksha-elevator.webp";
+import Main1 from "../assets/DakshaMain1.webp";
+import Main2 from "../assets/DakshMain2.webp";
 import About from "../assets/dksha-about.webp";
 import AutoPopupForm from "@/components/AutoPopupForm";
+import { useEffect, useState } from "react";
+
 
 /* ============================================
    HERO SECTION — Blue gradient background like Daksh
    ============================================ */
 function HeroSection() {
+   const BACKGROUND_IMAGES = [
+    LogoDark,
+    Main1,
+    Main2
+  ];
+
+  const [currentImage, setCurrentImage] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImage((prev) => (prev + 1) % BACKGROUND_IMAGES.length);
+    }, 4000); // Change image every 3 seconds
+
+    return () => clearInterval(interval);
+  }, []);
   return (
     <>
       <SEO
         title="Daksh Elevators Pvt. Ltd. | Home, Commercial & Passenger Elevators Bangalore"
         description="Daksh Elevator Solutions provides premium elevators, installation, modernization, AMC, and maintenance services across India."
         keywords="Elevator manufacturer, Passenger Lift, Home Lift, Goods Lift"
-        canonical=""
-        ogImage=""
       />
       <section className="relative min-h-[85vh] flex items-center overflow-hidden  mt-20">
         {/* Background image with overlay */}
-        <div className="absolute inset-0">
-          <img
-            src={LogoDark}
-            alt="Elevator Company Bangalore"
-            className="w-full h-full object-cover"
-          />
-        </div>
+         <AnimatePresence mode="popLayout">
+            <motion.img
+              key={currentImage}
+              src={BACKGROUND_IMAGES[currentImage]}
+              alt="Daksh Elevators"
+              className="absolute inset-0 w-full h-full object-cover"
+              initial={{ opacity: 0, scale: 1.08 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 1.2 , ease: 'easeInOut'}}
+            />
+          </AnimatePresence>
+
+          {/* Dark Overlay */}
+          <div className="absolute inset-0 bg-black/40"></div>
 
         {/* Content */}
         <div className="container relative z-10 pt-32 pb-20">
@@ -118,7 +143,7 @@ function StatCard({ stat, index }: { stat: { label: string; value: number; suffi
 function ProductsSection() {
   const featured = PRODUCTS.slice(0, 4);
   return (
-    <section className="py-20 lg:py-28 bg-white">
+    <section className="py-14 bg-white">
       <div className="container">
         <SectionHeading
           label="Our Products"
@@ -167,7 +192,7 @@ function ProductsSection() {
    ============================================ */
 function ServicesSection() {
   return (
-    <section className="py-20 lg:py-28 bg-gray-50">
+    <section className="py-10 bg-gray-50">
       <div className="container">
         <SectionHeading
           label="Our Services"
@@ -208,7 +233,7 @@ function WhyChooseUs() {
   ];
 
   return (
-    <section className="py-20 lg:py-28 bg-white">
+    <section className="py-14 bg-white">
       <div className="container">
         <SectionHeading
           label="Why Choose Us"
@@ -236,7 +261,7 @@ function WhyChooseUs() {
    ============================================ */
 function IndustriesSection() {
   return (
-    <section className="py-20 lg:py-28 bg-gray-50">
+    <section className="py-14 bg-gray-50">
       <div className="container">
         <SectionHeading
           label="Industries Served"
@@ -262,7 +287,7 @@ function IndustriesSection() {
    ============================================ */
 function TestimonialsSection() {
   return (
-    <section className="py-20 lg:py-28 bg-white">
+    <section className="py-14 bg-white">
       <div className="container">
         <SectionHeading
           label="Testimonials"
@@ -299,7 +324,7 @@ function TestimonialsSection() {
 
 function AboutPreview() {
   return (
-    <section className="py-20 lg:py-28 bg-gray-50">
+    <section className="py-14 bg-gray-50">
       <div className="container">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
 
@@ -388,7 +413,7 @@ function AboutPreview() {
 function FAQSection() {
   const faqs = FAQS.slice(0, 5);
   return (
-    <section className="py-20 lg:py-28 bg-gray-50">
+    <section className="py-14 bg-gray-50">
       <div className="container">
         <SectionHeading
           label="FAQ"
@@ -426,7 +451,7 @@ function FAQItem({ faq, index }: { faq: { q: string; a: string }; index: number 
    ============================================ */
 function CTASection() {
   return (
-    <section className="py-20 lg:py-28 bg-brand-blue">
+    <section className="py-14 bg-brand-blue">
       <div className="container">
         <AnimatedSection>
           <div className="text-center">

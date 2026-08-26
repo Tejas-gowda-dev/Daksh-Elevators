@@ -190,7 +190,7 @@ export default function Contact() {
     COMPANY.address
   )}&output=embed`;
 
-  const directionsHref = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(
+  const directionsHref = `https://maps.app.goo.gl/WwaGdG3YgqgeWZGTA=${encodeURIComponent(
     COMPANY.address
   )}`;
 
